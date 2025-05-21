@@ -9,7 +9,10 @@ function Practice01ANS() {
                 setEvenNum(eventNum+2);
             }}>짝수출력</button>
             {/* <span style={ {color:'red'} }>{eventNum}</span> */}
-            <span className='even-red'>{eventNum}</span>
+            {/* <span className='even-red'>{eventNum}</span> */}
+            {
+                eventNum!=0&&<span className='even-red'>{eventNum}</span>
+            }
         </div>
     );
 }
