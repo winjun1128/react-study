@@ -6,12 +6,11 @@ function Props01(){
         <div>
             <p></p>
             {/* Box 컴포넌트에 매개변수 전달 */}
-            
             <Box title={titleArr[0]} content={contentArr[0]} /> 
             <Box title={titleArr[1]} content={contentArr[1]} />
             <Box title={titleArr[2]} content={contentArr[2]} />
             <Box title={titleArr[3]} content={contentArr[3]} />
-
+            
             {/* <Box title='아침' content='시리얼'/> 
             <Box title='점심' content='햄버거'/>
             <Box title='저녁' content='삼겹살'/>
