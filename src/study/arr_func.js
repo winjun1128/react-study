@@ -54,8 +54,43 @@ console.log(mapResult5);
 let mapResult6 = menuArr.map((item)=>'<p>' + item + '</p>');
 console.log(mapResult6);
 
+arr = [10, 20, 30, 40];
 // 3) filter
+// 필터링 : 조건에 맞는 값들만 보겠다
+console.log("--------------filter-------------")
+let result7 = arr.filter(()=>{
+    return true;
+});
+console.log(result7);
+
+let result8 = arr.filter((num)=>{
+    return num>=30;
+});
+console.log(result8);
+
+let result9 = arr.filter((num)=>{
+    return num != 20;
+});
+console.log(result9);
 
 // 4) find
+let result10 = arr.find((value)=>{
+    return value == 40;
+});
 
+let result11 = arr.find((value)=>{
+    return value == 60;
+});
+//찾는 값이 없으면? undefined
+console.log(result11);
 // 5) findIndex
+let result12 = arr.findIndex((value)=>{
+    return value == 40;
+});
+console.log(result12);
+
+let result13 = arr.findIndex((value)=>{
+    return value == 60;
+});
+//찾는 값이 없으면? -1
+console.log(result13);
