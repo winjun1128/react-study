@@ -10,6 +10,7 @@ import Practice02 from './practice/Practice02';
 import Props01 from './study/Props01';
 import Props02 from './study/Props02';
 import Practice03 from './practice/Practice03ANS/Practice03';
+import NewsBlog from './newsblog/NewsBlog';
 function App() {
   //return <Basic01/>;    //JSX 기본
   //return <State01/>;      //useState 사용법
@@ -22,7 +23,8 @@ function App() {
   // return <Props01/>
   // return <Props02/>
   // return <Practice03/>
-  return <Practice03/>;
+  // return <Practice03/>;
+  return <NewsBlog/>;
   // return (
   //   <div className="App">
   //     <header className="App-header">
