@@ -23,16 +23,77 @@ function NewsBlog() {
 
     let [selectedTitle, setSelectedTitle] = useState('');
     let [selectedLikeCount,setSelectedLikeCount] = useState(0);
+
+    //input 값을 저장할 변수
+    let[inputText,setInputText] = useState('');
     return (
         <div>
             <div className='black-nav'>
                 <h4>BLog Header</h4>
                 <p style={{ color: "orange", fontSize: '20px' }}>{title}</p>
             </div>
+
+            <div>
+                <input type='text' id="input_news" value={inputText} onChange={(event)=>{
+                    // console.log(event);
+                    console.log(event.target.value);
+                    setInputText(event.target.value);
+                }}></input>
+                <button onClick={()=>{
+                    //입력된 값을 제목 배열에 추가
+                    //입력된 값: input 요소에서 onChange가 발생할때 ->inputText state변수에 저장되어 있음.
+                    //제목배열 news 배열변수에 추가 -> 리렌더링 -> news배열의 갯수만큼 반복(map) 화면에 표시
+                   
+                    //입력값이 있는 경우만~
+                    //if(inputText.trim() != ''){
+                    // if(inputText.trim().length >0){
+                    //     let temp = [...news];
+                    //     temp.push(inputText);
+                    //     setNews(temp);
+
+                    //     //배열state변수 바꾸는 법 : 배열 복사 -> 값 변경/추가/삭제 -> set함수로 원래 배열에 저장
+                    //     setInputText('');   //공백 -> input value={inputText}
+                    // }
+                    // else{
+                    //     alert("내용을 입력 후 등록하세요~");
+                    //     setInputText('');
+                    // }
+
+                    //inputText = '     abc';
+
+                    //if(inputText.trim().length == 0){
+
+                    inputText = inputText.trim();
+                    if(inputText.length == 0){
+                        alert("내용을 입력 후 등록하세요~");
+                        setInputText('');
+                        return;
+                    }
+                    let temp = [...news];
+                    temp.push(inputText);
+                    setNews(temp);
+
+                    likeCountAr.push(0);
+
+                    //배열state변수 바꾸는 법 : 배열 복사 -> 값 변경/추가/삭제 -> set함수로 원래 배열에 저장
+                    setInputText('');   //공백 -> input value={inputText}
+
+                
+
+                    /*
+                    let title = document.getElementById('input_news').value;
+                    let temp = [...news];
+                    temp.push(title);
+                    setNews(temp);
+
+                    document.getElementById('input_news').value='';
+                    */
+                }}>등록</button>
+            </div>
             {
                 news.map((item, index) => {     
                     return (
-                        <div className='post-list'>
+                        <div className='post-list' key={index}>
                             <h4 onClick={() => {
                                setShowModal(!showModal);
                                 setSelectedTitle(item);
