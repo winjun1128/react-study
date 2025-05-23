@@ -69,11 +69,11 @@ function NewsBlog() {
                         setInputText('');
                         return;
                     }
-                    let temp = [...news];
+                    let temp = [...news];           //뉴스추가
                     temp.push(inputText);
                     setNews(temp);
 
-                    likeCountAr.push(0);
+                    likeCountAr.push(0);            //좋아요추가
 
                     //배열state변수 바꾸는 법 : 배열 복사 -> 값 변경/추가/삭제 -> set함수로 원래 배열에 저장
                     setInputText('');   //공백 -> input value={inputText}
@@ -91,7 +91,7 @@ function NewsBlog() {
                 }}>등록</button>
             </div>
             {
-                news.map((item, index) => {     
+                news.map((item, index) => {         //0 1 2    //아이템과 인덱스로 값과 인덱스추출
                     return (
                         <div className='post-list' key={index}>
                             <h4 onClick={() => {
@@ -106,6 +106,13 @@ function NewsBlog() {
                                 setLikeCountAr(temp);          
                             }}>❤</span>{likeCountAr[index]}</h4>
                             <p>내용 무</p>
+                            <button onClick={()=>{
+                                let temp = [...news];
+                                temp.splice(index,1);               //뉴스삭제
+                                likeCountAr.splice(index,1);        //좋아요삭제
+                                setNews(temp);
+
+                            }}>삭제</button>
                         </div>
                     )
                 })
