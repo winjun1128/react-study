@@ -26,7 +26,8 @@ function App() {
   // return <Practice03/>
   // return <Practice03/>;
   // return <NewsBlog/>;
-  return <Practice04/>
+  // return <Practice04/>
+  return <NewsBlog/>
   // return (
   //   <div className="App">
   //     <header className="App-header">
