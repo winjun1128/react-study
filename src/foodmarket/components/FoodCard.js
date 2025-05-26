@@ -1,6 +1,8 @@
 import { Nav, Navbar, Card, Button, Row, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router';
 //function FoodCard( {foods,index,food}){
 function FoodCard(props) {
+    let navigate = useNavigate();
     return (
         <Card style={{ width: '18rem' }}>
             {/* <Card.Img variant="top" src={food1} /> */}
@@ -13,7 +15,9 @@ function FoodCard(props) {
                 <Card.Text>
                     {props.food.price}
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Button variant="primary" onClick={()=>{
+                    navigate("/detail/"+props.food.id);
+                }}>상세보기</Button>
             </Card.Body>
         </Card>
     );

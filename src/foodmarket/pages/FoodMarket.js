@@ -13,14 +13,15 @@ import food1 from '../images/food1.jpg';
 import food2 from '../images/food2.jpg';
 import food3 from '../images/food3.jpg';
 
-import foodsData from '../data/foods.Data';
+import foodsData from '../data/foodsData';
 import './FoodMarket.css';
 
 import FoodCard from '../components/FoodCard';
 import { Routes, Route, Link,useNavigate } from 'react-router';
 // import { Link } from 'react-router';
 import Home from './Home';
-import Detail from './Detail';
+import Detail from "./Detail";
+// import Detail  from './detail';
 function FoodMarket() {
     // foodsData는 배열
     let [foods,setFoods] = useState(foodsData); 
