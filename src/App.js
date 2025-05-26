@@ -30,8 +30,8 @@ function App() {
   // return <NewsBlog/>;
   // return <Practice04/>
   // return <NewsBlog/>
-  // return <FoodMarket/>
-    return <Practice05/>
+  return <FoodMarket/>
+    // return <Practice05/>
   // return (
   //   <div className="App">
   //     <header className="App-header">

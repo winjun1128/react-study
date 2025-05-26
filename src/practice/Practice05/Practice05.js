@@ -53,10 +53,24 @@ function Practice05(){
         
             {
                 // 'red', 'green', 'blue', 'black'
-                boxes.map((item)=>{
-                    //return <div className='box' style={{backgroundColor:item}}></div>
-                    return <ColorBox bgColor={item} />
+                boxes.map((item,index)=>{
+                    // return (<div className='box' style={{backgroundColor:item}}>
+                    //              <button onClick={()=>{
+                    //                     //삭제
+
+                    //                 //boxes,setBoxes,index
+                    //                 //props.index
+                    //                 let temp = [...boxes];
+                    //                 temp.splice(index,1);
+                    //                 props.setBoxes(temp);
+                    //             }}>X</button>
+                    // </div>)
+                    return <ColorBox bgColor={item} index={index} boxes={boxes} setBoxes={setBoxes} />
                 })
+
+                //splice(위치,몇개지우겠다)
+                //splice(2,1)
+                //let[boxes,setBoxes] = useState(['red','blue','green','black']);
             }
         </div>
     );
