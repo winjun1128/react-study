@@ -13,6 +13,7 @@ import Practice03 from './practice/Practice03ANS/Practice03';
 import NewsBlog from './newsblog/NewsBlog';
 import Practice04 from './practice/Practice04/Practice04';
 import FoodMarket from './foodmarket/pages/FoodMarket';
+import Practice05 from './practice/Practice05/Practice05';
 function App() {
   //return <Basic01/>;    //JSX 기본
   //return <State01/>;      //useState 사용법
@@ -29,7 +30,8 @@ function App() {
   // return <NewsBlog/>;
   // return <Practice04/>
   // return <NewsBlog/>
-  return <FoodMarket/>
+  // return <FoodMarket/>
+    return <Practice05/>
   // return (
   //   <div className="App">
   //     <header className="App-header">
