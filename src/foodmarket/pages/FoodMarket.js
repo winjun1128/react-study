@@ -20,6 +20,7 @@ import FoodCard from '../components/FoodCard';
 import { Routes, Route, Link,useNavigate } from 'react-router';
 // import { Link } from 'react-router';
 import Home from './Home';
+import Detail from './Detail';
 function FoodMarket() {
     // foodsData는 배열
     let [foods,setFoods] = useState(foodsData); 
@@ -61,11 +62,21 @@ function FoodMarket() {
 
                     이동할 경로를 매개변수로 전달하면서 함수 사용
                     navigate("이동할 경로");
+
+                주소창에 포함되어있는 값을 활용
+                    /경로/:경로상에서 인식할 위치변수명
+                    path='/detail/:id'
+
+                    경로파라미터 인식-> useParams();
             */}
             <Routes>
                 <Route path='/' element={<Home foods={foods} />}></Route>
                 <Route path='/home' element={<Home foods={foods} />}></Route>
-                <Route path='/detail' element={<h1>/detail</h1>}></Route>
+                <Route path='/detail/:id' element={<Detail foods={foods}/>}></Route>
+                {/* localhost:3000/detail/fd001
+                localhost:3000/detail/fd002
+                localhost:3000/detail/fd003
+                localhost:3000/detail/fd004 */}
 
                 {/* <Route path='/info/company' element={<h1>/info company</h1>}></Route>
                 <Route path='/info/contact' element={<h1>/info contact</h1>}></Route> */}
