@@ -7,12 +7,12 @@ import Temp from './Temp';
 import {BrowserRouter} from 'react-router';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-    {/* <Temp/> */}
-  </React.StrictMode>
+    /* <Temp/> */
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
