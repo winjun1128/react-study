@@ -34,9 +34,9 @@ function App() {
   // return <Practice04/>
     // return <Repractice04/>
   // return <NewsBlog/>
-  // return <FoodMarket/>
+  return <FoodMarket/>
     // return <Practice05/>
-    return <Practice06/>
+    // return <Practice06/>
   // return (
   //   <div className="App">
   //     <header className="App-header">
