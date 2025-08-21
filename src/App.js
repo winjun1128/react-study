@@ -18,6 +18,7 @@ import Renewsblog from './newsblog/Renewsblog';
 import Repractice04 from './practice/Practice04/Repractice04';
 import Practice06 from './practice/Practice06/Practice06';
 import AppRS from './react_spring/AppRS';
+import Login from './react_spring/Login';
 function App() {
   //return <Basic01/>;    //JSX 기본
   //return <State01/>;      //useState 사용법
@@ -38,7 +39,8 @@ function App() {
   // return <FoodMarket/>
     // return <Practice05/>
     // return <Practice06/>
-    return <AppRS/>;
+    // return <AppRS/>;
+    return <Login/>;
   // return (
   //   <div className="App">
   //     <header className="App-header">
